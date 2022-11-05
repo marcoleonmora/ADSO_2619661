@@ -96,10 +96,61 @@ def mostrarInfIzq():
         print()
 
 
+def mostrarMenu():
+    print()
+    print()
+    print('++*************************')
 
-print('++*************************')
-mostrarMatriz()
+    print('a. Recorrer la diagonal principal')
+    print('b. Recorrer la diagonal inversa')
+    print('c. mostrar superior derecha')
+    print('d. mostrar  inferior izquierda')
+    print('e. mostrar superior izquierda')
+    print('f. mostrar inferior derecha.')
+    print('-  otra tecla para terminar.')
+    opc = input('POR FAVOR, SELECCIONE UNA LETRA: ').lower()
+    return opc
+
+#PROGRAMA PRINCIPAL
     
+
+
+mostrarMatriz()
+
+while True:
+    seleccion = mostrarMenu()
+
+    if seleccion == 'a':
+        mostrarDiagPpal()
+        
+    elif seleccion == 'b':
+        mostrarDiagInv()
+        
+    elif seleccion == 'c':
+        mostrarSupDer()
+        
+    elif seleccion == 'd':
+        mostrarInfIzq()
+        
+    elif seleccion == 'e':
+        mostrarSupIzq()
+        
+    elif seleccion == 'f':
+        mostrarInfDer()
+        
+    else:
+        break
+
+
+print('fin.')
+    
+    
+
+
+
+
+
+
 
 
     
